@@ -7,7 +7,7 @@ import { eth, FILE_BASE_URL } from '../bootstrap/dapp-api'
 import './t2cr-evidence.css'
 import './app.css'
 
-class T2CREvidence extends Component {
+class TCREvidence extends Component {
   state = {
     token: null
   }
@@ -58,23 +58,23 @@ class T2CREvidence extends Component {
 
     const symbolURI = `${FILE_BASE_URL}/${token.symbolMultihash}`
     return (
-      <div className="T2CREvidence">
+      <div className="TCREvidence">
         <h4>The Token in Question:</h4>
-        <div className="T2CREvidence-data">
+        <div className="TCREvidence-data">
           <a
-            className="T2CREvidence-symbol"
+            className="TCREvidence-symbol"
             href={symbolURI}
             target="_blank"
             rel="noopener noreferrer"
           >
             <img
-              className="T2CREvidence-symbol-image"
+              className="TCREvidence-symbol-image"
               src={symbolURI}
               onError={this.onImgError}
               alt="Token Symbol"
             />
           </a>
-          <div className="T2CREvidence-text">
+          <div className="TCREvidence-text">
             <div>Name: {token.name}</div>
             <div>Ticker: {token.ticker}</div>
             <div>Address: {token.addr}</div>
@@ -92,7 +92,7 @@ const App = () => (
     <Helmet>
       <title>T2CR - Evidence Display</title>
     </Helmet>
-    <T2CREvidence />
+    <TCREvidence />
   </div>
 )
 

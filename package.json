@@ -19,12 +19,26 @@
     "lint:js": "kathari lint:js --no-root",
     "lint": "yarn run lint:scss && yarn run lint:js",
     "test": "echo \"\"",
+    "precommit": "kathari precommit",
+    "commitmsg": "kathari commitmsg",
+    "cz": "kathari cz",
     "start:scss": "yarn run build:scss && yarn run build:scss --watch",
     "start:js": "react-scripts start",
     "build:scss": "node-sass-chokidar ./src -o ./src",
     "build:js": "react-scripts build",
     "start": "run-p start:scss start:js",
     "build": "yarn run build:scss && yarn run build:js"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "kathari precommit",
+      "commit-msg": "kathari commitmsg"
+    }
   },
   "eslintConfig": {
     "extends": "react-app"
