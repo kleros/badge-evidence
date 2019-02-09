@@ -1,0 +1,11 @@
+/* @define TCREvidence */
+.TCREvidence {
+  margin-top: -70px;
+  overflow: hidden;
+
+  &-picture {
+    &-link {
+      height: 230px;
+    }
+  }
+}

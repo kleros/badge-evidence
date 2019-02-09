@@ -72,7 +72,7 @@ class Evidence extends Component {
               </p>
               <p className="Evidence-container-ticker">{token.ticker}</p>
             </div>
-            <div className="Evidence-separator" />
+            <div className="Evidence-data-separator" />
             <div className="Evidence-container">
               <p className="Evidence-container-multiline Evidence-label">
                 Address
