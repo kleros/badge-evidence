@@ -15,16 +15,6 @@ class Evidence extends Component {
   componentDidMount() {
     // eslint-disable-next-line unicorn/prefer-add-event-listener
     window.onmessage = this.receiveEvidence.bind(this)
-    window.parent.postMessage(
-      // TODO: Remove after testing.
-      {
-        target: 'evidence',
-        loaded: true,
-        arbitrableContractAddress: '0xca84015a9f19c17292fbd40aa0a0135f3d7d3901',
-        disputeID: 19
-      },
-      '*'
-    )
   }
 
   async receiveEvidence(message) {
