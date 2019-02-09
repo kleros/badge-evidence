@@ -9,6 +9,7 @@
   NODE_VERSION='9.10.0'
   YARN_FLAGS='--pure-lockfile'
   REACT_APP_DEV_FILE_UPLOAD_URL="https://8aoprv935h.execute-api.us-east-2.amazonaws.com/staging/cfs"
+  REACT_APP_DEV_T2CR_URL="https://kleros-t2cr.netlify.com"
 # Production context: All deploys to the main
 # repository branch will inherit these settings.
 [context.production]
@@ -16,3 +17,4 @@
   NODE_VERSION='9.10.0'
   YARN_FLAGS='--pure-lockfile'
   REACT_APP_PROD_FILE_UPLOAD_URL="https://8aoprv935h.execute-api.us-east-2.amazonaws.com/staging/cfs"
+  REACT_APP_DEV_T2CR_URL="https://kleros-t2cr.netlify.com"

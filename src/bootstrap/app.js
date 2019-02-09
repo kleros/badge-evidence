@@ -2,12 +2,12 @@ import React, { Component } from 'react'
 import { Helmet } from 'react-helmet'
 
 import ArbitrableTokenList from '../assets/contracts/arbitrable-token-list.json'
-import { eth, FILE_BASE_URL } from '../bootstrap/dapp-api'
+import { eth, FILE_BASE_URL, T2CR_URL } from '../bootstrap/dapp-api'
 
-import './t2cr-evidence.css'
 import './app.css'
+import './evidence.css'
 
-class TCREvidence extends Component {
+class Evidence extends Component {
   state = {
     token: null
   }
@@ -58,28 +58,40 @@ class TCREvidence extends Component {
 
     const symbolURI = `${FILE_BASE_URL}/${token.symbolMultihash}`
     return (
-      <div className="TCREvidence">
+      <div className="Evidence">
         <h4>The Token in Question:</h4>
-        <div className="TCREvidence-data">
-          <a
-            className="TCREvidence-symbol"
-            href={symbolURI}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              className="TCREvidence-symbol-image"
-              src={symbolURI}
-              onError={this.onImgError}
-              alt="Token Symbol"
-            />
-          </a>
-          <div className="TCREvidence-text">
-            <div>Name: {token.name}</div>
-            <div>Ticker: {token.ticker}</div>
-            <div>Address: {token.addr}</div>
-            <div>Symbol Multihash: {token.symbolMultihash}</div>
-            <div>ID: {token.ID}</div>
+        <div className="Evidence-data">
+          <img className="Evidence-symbol" src={symbolURI} alt="Avatar" />
+          <div className="Evidence-data-card">
+            <div
+              className="Evidence-container"
+              style={{ overflowX: 'initial' }}
+            >
+              <p className="Evidence-container-name">
+                <b>{token.name}</b>
+              </p>
+              <p className="Evidence-container-ticker">{token.ticker}</p>
+            </div>
+            <div className="Evidence-separator" />
+            <div className="Evidence-container">
+              <p className="Evidence-container-multiline Evidence-label">
+                Address
+              </p>
+              <p className="Evidence-container-multiline Evidence-value">
+                {token.addr}
+              </p>
+              <a
+                className="Evidence-link"
+                href={`${T2CR_URL}/token/${token.ID}`}
+              >
+                <p
+                  className="Evidence-container-multiline"
+                  style={{ marginTop: '10px' }}
+                >
+                  View Submission
+                </p>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -92,7 +104,7 @@ const App = () => (
     <Helmet>
       <title>T2CR - Evidence Display</title>
     </Helmet>
-    <TCREvidence />
+    <Evidence />
   </div>
 )
 
