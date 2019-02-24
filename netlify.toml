@@ -17,8 +17,8 @@
   [context.production.environment]
   NODE_VERSION='9.10.0'
   YARN_FLAGS='--pure-lockfile'
-  REACT_APP_DEV_ETHEREUM_PROVIDER="https://kovan.infura.io/v3/9c26dd38fd2e44e6bcff6a133eb67930"
-  REACT_APP_DEV_FILE_BASE_URL="https://staging-cfs.s3.us-east-2.amazonaws.com"
+  REACT_APP_PROD_ETHEREUM_PROVIDER="https://kovan.infura.io/v3/9c26dd38fd2e44e6bcff6a133eb67930"
+  REACT_APP_PROD_FILE_BASE_URL="https://staging-cfs.s3.us-east-2.amazonaws.com"
 
 [[redirects]]
   from = "/*"
