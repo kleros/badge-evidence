@@ -28,9 +28,9 @@
 [[headers]]
   for = "/t2cr"
   [headers.values]
-    Access-Control-Allow-Origin = ["https://kleros-court.netlify.com"]
+    Access-Control-Allow-Origin = "*"
 
 [[headers]]
   for = "/badge"
   [headers.values]
-    Access-Control-Allow-Origin = ["https://kleros-court.netlify.com"]
+    Access-Control-Allow-Origin = "*"
