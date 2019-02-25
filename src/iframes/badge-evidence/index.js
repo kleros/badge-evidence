@@ -75,7 +75,7 @@ class BadgeEvidence extends Component {
               </p>
               <a
                 className="BadgeEvidence-link"
-                href={`${T2CR_URL}/badge/${badgeAddress}`}
+                href={`${T2CR_URL}/badge/${badgeAddress}/${tokenAddress}`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
