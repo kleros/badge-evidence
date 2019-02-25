@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
 
 import ArbitrableAddressList from '../../assets/contracts/arbitrable-address-list.json'
-import { eth } from '../../bootstrap/dapp-api'
+import { eth, T2CR_URL } from '../../bootstrap/dapp-api'
 
 import './badge-evidence.css'
 
@@ -37,7 +36,7 @@ class BadgeEvidence extends Component {
       .contract(ArbitrableAddressList.abi)
       .at(arbitrableContractAddress)
 
-    const tokenAddress = (await arbitrableAddressList.arbitratorDisputeIDToTokenID(
+    const tokenAddress = (await arbitrableAddressList.arbitratorDisputeIDToAddress(
       arbitratorContractAddress,
       disputeID
     ))[0]
@@ -74,9 +73,11 @@ class BadgeEvidence extends Component {
               <p className="BadgeEvidence-container-multiline BadgeEvidence-value">
                 {badgeAddress}
               </p>
-              <Link
+              <a
                 className="BadgeEvidence-link"
-                to={`/badge/${badgeAddress}/${tokenAddress}`}
+                href={`${T2CR_URL}/badge/${badgeAddress}`}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <p
                   className="BadgeEvidence-container-multiline"
@@ -84,7 +85,7 @@ class BadgeEvidence extends Component {
                 >
                   View Submission
                 </p>
-              </Link>
+              </a>
             </div>
           </div>
         </div>

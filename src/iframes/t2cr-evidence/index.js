@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
 
 import ArbitrableTokenList from '../../assets/contracts/arbitrable-token-list.json'
-import { eth, FILE_BASE_URL } from '../../bootstrap/dapp-api'
+import { eth, FILE_BASE_URL, T2CR_URL } from '../../bootstrap/dapp-api'
 
 import './t2cr-evidence.css'
 
@@ -75,14 +74,19 @@ class TTCREvidence extends Component {
               <p className="TTCREvidence-container-multiline TTCREvidence-value">
                 {token.addr}
               </p>
-              <Link className="TTCREvidence-link" to={`/token/${token.ID}`}>
+              <a
+                className="TTCREvidence-link"
+                href={`${T2CR_URL}/token/${token.ID}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <p
                   className="TTCREvidence-container-multiline"
                   style={{ marginTop: '10px' }}
                 >
                   View Submission
                 </p>
-              </Link>
+              </a>
             </div>
           </div>
         </div>
