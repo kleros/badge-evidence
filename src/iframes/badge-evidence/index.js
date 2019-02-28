@@ -56,7 +56,7 @@ class BadgeEvidence extends Component {
 
     return (
       <div className="BadgeEvidence">
-        <h4 style={{ marginLeft: 0 }}>The Token in Question:</h4>
+        <h4 style={{ marginLeft: 0, marginTop: 0 }}>The Token in Question:</h4>
         <div className="BadgeEvidence-data">
           <div className="BadgeEvidence-data-card">
             <div className="BadgeEvidence-container">
