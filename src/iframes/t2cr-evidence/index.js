@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import ArbitrableTokenList from '../../assets/contracts/arbitrable-token-list.json'
-import { eth, FILE_BASE_URL, T2CR_URL } from '../../bootstrap/dapp-api'
+import { eth, FILE_BASE_URL, T2CR_URL, web3 } from '../../bootstrap/dapp-api'
 
 import './t2cr-evidence.css'
 
@@ -72,7 +72,7 @@ class TTCREvidence extends Component {
                 Address
               </p>
               <p className="TTCREvidence-container-multiline TTCREvidence-value">
-                {token.addr}
+                {web3.utils.toChecksumAddress(token.addr)}
               </p>
               <a
                 className="TTCREvidence-link"

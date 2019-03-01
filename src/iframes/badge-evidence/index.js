@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import ArbitrableAddressList from '../../assets/contracts/arbitrable-address-list.json'
-import { eth, T2CR_URL } from '../../bootstrap/dapp-api'
+import { eth, T2CR_URL, web3 } from '../../bootstrap/dapp-api'
 
 import './badge-evidence.css'
 
@@ -64,18 +64,20 @@ class BadgeEvidence extends Component {
                 Token Address
               </p>
               <p className="BadgeEvidence-container-multiline BadgeEvidence-value">
-                {tokenAddress}
+                {web3.utils.toChecksumAddress(tokenAddress)}
               </p>
               <br />
               <p className="BadgeEvidence-container-multiline BadgeEvidence-label">
                 Badge Contract Address
               </p>
               <p className="BadgeEvidence-container-multiline BadgeEvidence-value">
-                {badgeAddress}
+                {web3.utils.toChecksumAddress(badgeAddress)}
               </p>
               <a
                 className="BadgeEvidence-link"
-                href={`${T2CR_URL}/badge/${badgeAddress}/${tokenAddress}`}
+                href={`${T2CR_URL}/badge/${web3.utils.toChecksumAddress(
+                  badgeAddress
+                )}/${web3.utils.toChecksumAddress(tokenAddress)}`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
