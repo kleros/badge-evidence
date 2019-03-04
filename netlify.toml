@@ -9,7 +9,8 @@
   NODE_VERSION='9.10.0'
   YARN_FLAGS='--pure-lockfile'
   REACT_APP_DEV_ETHEREUM_PROVIDER="https://kovan.infura.io/v3/9c26dd38fd2e44e6bcff6a133eb67930"
-  REACT_APP_DEV_FILE_BASE_URL="https://staging-cfs.s3.us-east-2.amazonaws.com"
+  REACT_APP_DEV_IPFS_URL="https://ipfs.kleros.io"
+  REACT_APP_DEV_S3_URL="https://staging-cfs.s3.us-east-2.amazonaws.com"
   REACT_APP_DEV_T2CR_URL="https://kleros-t2cr.netlify.com"
 
 # Production context: All deploys to the main
@@ -19,7 +20,8 @@
   NODE_VERSION='9.10.0'
   YARN_FLAGS='--pure-lockfile'
   REACT_APP_PROD_ETHEREUM_PROVIDER="https://kovan.infura.io/v3/9c26dd38fd2e44e6bcff6a133eb67930"
-  REACT_APP_PROD_FILE_BASE_URL="https://staging-cfs.s3.us-east-2.amazonaws.com"
+  REACT_APP_PROD_IPFS_URL="https://ipfs.kleros.io"
+  REACT_APP_PROD_S3_URL="https://staging-cfs.s3.us-east-2.amazonaws.com"
   REACT_APP_PROD_T2CR_URL="https://kleros-t2cr.netlify.com"
 
 [[redirects]]

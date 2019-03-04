@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import ArbitrableTokenList from '../../assets/contracts/arbitrable-token-list.json'
-import { eth, FILE_BASE_URL, T2CR_URL, web3 } from '../../bootstrap/dapp-api'
+import { eth, IPFS_URL, S3_URL, T2CR_URL, web3 } from '../../bootstrap/dapp-api'
 
 import './t2cr-evidence.css'
 
@@ -50,7 +50,13 @@ class TTCREvidence extends Component {
     const { token } = this.state
     if (!token) return null
 
-    const symbolURI = `${FILE_BASE_URL}/${token.symbolMultihash}`
+    let symbolURI
+    if (token.symbolMultihash)
+      symbolURI =
+        token.symbolMultihash[0] === '/'
+          ? `${IPFS_URL}${token.symbolMultihash}`
+          : `${S3_URL}/${token.symbolMultihash}`
+
     return (
       <div className="TTCREvidence">
         <h4 style={{ marginLeft: 0 }}>The Token in Question:</h4>
