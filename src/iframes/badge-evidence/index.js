@@ -61,18 +61,12 @@ class BadgeEvidence extends Component {
           <div className="BadgeEvidence-data-card">
             <div className="BadgeEvidence-container">
               <p className="BadgeEvidence-container-multiline BadgeEvidence-label">
-                Token Address
+                Address
               </p>
               <p className="BadgeEvidence-container-multiline BadgeEvidence-value">
                 {web3.utils.toChecksumAddress(tokenAddress)}
               </p>
               <br />
-              <p className="BadgeEvidence-container-multiline BadgeEvidence-label">
-                Badge Contract Address
-              </p>
-              <p className="BadgeEvidence-container-multiline BadgeEvidence-value">
-                {web3.utils.toChecksumAddress(badgeAddress)}
-              </p>
               <a
                 className="BadgeEvidence-link"
                 href={`${T2CR_URL}/badge/${web3.utils.toChecksumAddress(
