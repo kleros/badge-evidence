@@ -59,7 +59,7 @@ class TTCREvidence extends Component {
 
     return (
       <div className="TTCREvidence">
-        <h4 style={{ marginLeft: 0 }}>The Token in Question:</h4>
+        <h4 style={{ margin: '0 0 12px 0' }}>The Token in Question:</h4>
         <div className="TTCREvidence-data">
           <img className="TTCREvidence-symbol" src={symbolURI} alt="Avatar" />
           <div className="TTCREvidence-data-card">

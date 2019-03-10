@@ -56,7 +56,7 @@ class BadgeEvidence extends Component {
 
     return (
       <div className="BadgeEvidence">
-        <h4 style={{ margin: 0 }}>The Token in Question:</h4>
+        <h4 style={{ margin: '0 0 12px 0' }}>The Token in Question:</h4>
         <div className="BadgeEvidence-data">
           <div className="BadgeEvidence-data-card">
             <div className="BadgeEvidence-container">
@@ -66,7 +66,6 @@ class BadgeEvidence extends Component {
               <p className="BadgeEvidence-container-multiline BadgeEvidence-value">
                 {web3.utils.toChecksumAddress(tokenAddress)}
               </p>
-              <br />
               <a
                 className="BadgeEvidence-link"
                 href={`${T2CR_URL}/badge/${web3.utils.toChecksumAddress(
