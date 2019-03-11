@@ -8,7 +8,7 @@ import './app.css'
 const App = () => (
   <>
     <Helmet>
-      <title>Tokens on Trial</title>
+      <title>Kleros - Evidence Display</title>
     </Helmet>
     <BadgeEvidence />
   </>
