@@ -30,11 +30,6 @@
   status = 200
 
 [[headers]]
-  for = "/t2cr"
-  [headers.values]
-    Access-Control-Allow-Origin = "*"
-
-[[headers]]
-  for = "/badge"
+  for = "/*"
   [headers.values]
     Access-Control-Allow-Origin = "*"
