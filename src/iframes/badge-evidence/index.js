@@ -86,8 +86,6 @@ class BadgeEvidence extends Component {
     let { token } = this.state
     if (!tokenAddress || !badgeAddress) return null
 
-    console.info(metaEvidence)
-
     if (token) token.symbolMultihash = `${IPFS_URL}${token.symbolMultihash}`
     else
       token = {
