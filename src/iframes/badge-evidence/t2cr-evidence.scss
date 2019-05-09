@@ -1,5 +1,5 @@
-/* @define BadgeEvidence */
-.BadgeEvidence {
+/* @define TTCREvidence */
+.TTCREvidence {
   align-self: start;
   display: flex;
   flex-direction: column;
@@ -8,12 +8,26 @@
   @media only screen and (max-width: 600px) {
     &-data {
       flex-direction: column;
+      margin: 0 15px;
     }
   }
 
   @media only screen and (min-width: 600px) {
     &-data {
       flex-direction: row;
+    }
+  }
+
+  @media only screen and (min-width: 600px) {
+    &-symbol {
+      height: 100%;
+      padding: 10px;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    &-symbol {
+      padding-bottom: 20px;
     }
   }
 
@@ -28,7 +42,7 @@
 
       &-separator {
         border-top: 1px solid #ccc;
-        margin: 20px 0 20px 0;
+        margin: 15px 0;
       }
     }
 
@@ -46,15 +60,14 @@
     &-card {
       border: 1px solid #ccc;
       border-radius: 5px;
-      box-shadow: 0 3px 6px rgba(201, 201, 201, 0.5);
       display: flex;
       overflow: hidden;
-      padding: 20px;
+      padding: 23px;
       transition: 0.3s;
       width: 100%;
 
       &:hover {
-        box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2);
+        box-shadow: 0 3px 6px rgba(201, 201, 201, 0.5);
       }
     }
 
@@ -78,9 +91,10 @@
     }
 
     &-name, &-ticker {
-      font-size: 1.5em;
+      font-size: 1.2em;
       line-height: 23px;
       margin: 0;
+      margin-bottom: 10px;
       padding: 0;
     }
 
@@ -108,9 +122,15 @@
   &-symbol {
     align-self: center;
     border-radius: 5px 5px 0 0;
-    height: 100%;
     object-fit: contain;
-    padding-right: 20px;
-    width: 130px;
+    width: 110px;
+  }
+
+  &-plus {
+    font-size: 2em;
+    font-weight: bold;
+    margin: 10px 0;
+    text-align: center;
+    width: 100%;
   }
 }
