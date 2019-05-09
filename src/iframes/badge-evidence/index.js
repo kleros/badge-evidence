@@ -99,77 +99,69 @@ class BadgeEvidence extends Component {
 
     return (
       <div className="TTCREvidence">
-        <h4 style={{ margin: '0 0 12px 0' }}>The Token in Question:</h4>
-        <div className="TTCREvidence-data-card">
-          <img
-            className="TTCREvidence-symbol"
-            src={token.symbolMultihash}
-            alt="token symbol"
-          />
-          <div className="TTCREvidence-data-separator" />
-          <div className="TTCREvidence-container">
-            <p className="TTCREvidence-container-name">
-              <b>{token.name}</b> {token.ticker}
-            </p>
-            <p className="TTCREvidence-container-multiline TTCREvidence-label">
-              Address
-            </p>
-            <p className="TTCREvidence-container-multiline TTCREvidence-value">
-              {web3.utils.toChecksumAddress(token.addr)}
-            </p>
-            <a
-              className="TTCREvidence-link"
-              href={`${T2CR_URL}/badge/${web3.utils.toChecksumAddress(
-                badgeAddress
-              )}/${web3.utils.toChecksumAddress(tokenAddress)}`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <p
-                className="TTCREvidence-container-multiline"
-                style={{ marginTop: '10px' }}
-              >
-                View Submission
+        <h4 style={{ margin: '0 0 6px 0' }}>The Token in Question:</h4>
+        <div className="TTCREvidence-cards">
+          <div className="TTCREvidence-data-card">
+            <img
+              className="TTCREvidence-symbol"
+              src={token.symbolMultihash}
+              alt="token symbol"
+            />
+            <div className="TTCREvidence-data-separator" />
+            <div className="TTCREvidence-container">
+              <p className="TTCREvidence-container-name">
+                <b>{token.name}</b> {token.ticker}
               </p>
-            </a>
+              <p className="TTCREvidence-container-multiline TTCREvidence-label">
+                Address
+              </p>
+              <p className="TTCREvidence-container-multiline TTCREvidence-value">
+                {web3.utils.toChecksumAddress(token.addr)}
+              </p>
+              <a
+                className="TTCREvidence-link"
+                href={`${T2CR_URL}/badge/${web3.utils.toChecksumAddress(
+                  badgeAddress
+                )}/${web3.utils.toChecksumAddress(tokenAddress)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <p
+                  className="TTCREvidence-container-multiline"
+                  style={{ marginTop: '10px' }}
+                >
+                  View Submission
+                </p>
+              </a>
+            </div>
           </div>
-        </div>
-        <p className="TTCREvidence-plus">+</p>
-        <div className="TTCREvidence-data-card">
-          <img
-            className="TTCREvidence-symbol"
-            src={`${IPFS_URL}/${metaEvidence.variables.symbolURI}`}
-            alt="badge symbol"
-          />
-          <div className="TTCREvidence-data-separator" />
-          <div className="TTCREvidence-container">
-            <p className="TTCREvidence-container-multiline TTCREvidence-label">
-              Badge
-            </p>
-            <p className="TTCREvidence-container-multiline TTCREvidence-value">
-              <b>{metaEvidence.variables.title}</b>
-            </p>
-            <br />
-            <p className="TTCREvidence-container-multiline TTCREvidence-value">
-              {metaEvidence.variables.description}
-            </p>
-            <br />
-            <p className="TTCREvidence-container-multiline TTCREvidence-value">
-              {metaEvidence.variables.criteriaDescription}
-            </p>
-            <a
-              className="TTCREvidence-link"
-              href={`${IPFS_URL}/${metaEvidence.fileURI}`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <p
-                className="TTCREvidence-container-multiline"
-                style={{ marginTop: '10px' }}
-              >
-                View Criteria
+          <p className="TTCREvidence-plus">+</p>
+          <div className="TTCREvidence-data-card">
+            <img
+              className="TTCREvidence-symbol"
+              src={`${IPFS_URL}/${metaEvidence.variables.symbolURI}`}
+              alt="badge symbol"
+            />
+            <div className="TTCREvidence-data-separator" />
+            <div className="TTCREvidence-container">
+              <p className="TTCREvidence-container-multiline TTCREvidence-label">
+                Badge
               </p>
-            </a>
+              <b>{metaEvidence.variables.title}</b>
+              <a
+                className="TTCREvidence-link"
+                href={`${IPFS_URL}/${metaEvidence.fileURI}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <p
+                  className="TTCREvidence-container-multiline"
+                  style={{ marginTop: '10px' }}
+                >
+                  View Criteria
+                </p>
+              </a>
+            </div>
           </div>
         </div>
       </div>
