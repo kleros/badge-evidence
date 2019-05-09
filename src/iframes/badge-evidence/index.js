@@ -133,7 +133,7 @@ class BadgeEvidence extends Component {
               </a>
             </div>
           </div>
-          <p className="TTCREvidence-plus">+</p>
+          <p className="TTCREvidence-plus">|</p>
           <div className="TTCREvidence-data-card">
             <img
               className="TTCREvidence-symbol"
