@@ -13,6 +13,7 @@
   "author": "Kleros",
   "license": "MIT",
   "private": true,
+  "homepage": "./",
   "scripts": {
     "prettify": "kathari prettify",
     "lint:scss": "kathari lint:scss",
