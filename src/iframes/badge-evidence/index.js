@@ -12,7 +12,7 @@ import {
 } from '../../bootstrap/dapp-api'
 import UnknownToken from '../../assets/unknown.svg'
 
-import './t2cr-evidence.css'
+import './badge-evidence.css'
 
 class BadgeEvidence extends Component {
   state = {
@@ -101,64 +101,61 @@ class BadgeEvidence extends Component {
       }
 
     return (
-      <div className="TTCREvidence">
+      <div className="BadgeEvidence">
         <h4 style={{ margin: '0 0 6px 0' }}>The Token in Question:</h4>
-        <div className="TTCREvidence-cards">
-          <div className="TTCREvidence-data-card">
+        <div className="BadgeEvidence-cards">
+          <div className="BadgeEvidence-data-card">
             <img
-              className="TTCREvidence-symbol"
+              className="BadgeEvidence-symbol"
               src={token.symbolMultihash}
               alt="token symbol"
             />
-            <div className="TTCREvidence-data-separator" />
-            <div className="TTCREvidence-container">
-              <p className="TTCREvidence-container-name">
+            <div className="BadgeEvidence-data-separator" />
+            <div className="BadgeEvidence-container">
+              <p className="BadgeEvidence-container-name">
                 <b>{token.name}</b> {token.ticker}
               </p>
-              <p className="TTCREvidence-container-multiline TTCREvidence-label">
+              <p className="BadgeEvidence-container-multiline BadgeEvidence-label">
                 Address
               </p>
-              <p className="TTCREvidence-container-multiline TTCREvidence-value">
+              <p className="BadgeEvidence-container-multiline BadgeEvidence-value">
                 {web3.utils.toChecksumAddress(token.addr)}
               </p>
               <a
-                className="TTCREvidence-link"
+                className="BadgeEvidence-link"
                 href={`${T2CR_URL}/badge/${web3.utils.toChecksumAddress(
                   badgeAddress
                 )}/${web3.utils.toChecksumAddress(tokenAddress)}`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <p
-                  className="TTCREvidence-container-multiline"
-                  style={{ marginTop: '10px' }}
-                >
+                <p className="BadgeEvidence-container-multiline">
                   View Submission
                 </p>
               </a>
             </div>
           </div>
-          <p className="TTCREvidence-plus">|</p>
-          <div className="TTCREvidence-data-card">
+          <p className="BadgeEvidence-plus">|</p>
+          <div className="BadgeEvidence-data-card">
             <img
-              className="TTCREvidence-symbol"
+              className="BadgeEvidence-symbol"
               src={`${IPFS_URL}/${metaEvidence.variables.symbolURI}`}
               alt="badge symbol"
             />
-            <div className="TTCREvidence-data-separator" />
-            <div className="TTCREvidence-container">
-              <p className="TTCREvidence-container-multiline TTCREvidence-label">
+            <div className="BadgeEvidence-data-separator" />
+            <div className="BadgeEvidence-container">
+              <p className="BadgeEvidence-container-multiline BadgeEvidence-label">
                 Badge
               </p>
               <b>{metaEvidence.variables.title}</b>
               <a
-                className="TTCREvidence-link"
+                className="BadgeEvidence-link"
                 href={`${IPFS_URL}/${metaEvidence.fileURI}`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <p
-                  className="TTCREvidence-container-multiline"
+                  className="BadgeEvidence-container-multiline"
                   style={{ marginTop: '10px' }}
                 >
                   View Criteria
