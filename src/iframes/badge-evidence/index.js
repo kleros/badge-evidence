@@ -60,7 +60,7 @@ class BadgeEvidence extends Component {
 
     // Get token information, if ever submitted to the T2CR.
     const KOVAN_ID = 42
-    const chainID = await web3.eth.getChainID()
+    const chainID = await web3.eth.net.getId()
     const t2crAddress =
       chainID === KOVAN_ID ? KOVAN_T2CR_ADDRESS : MAINNET_T2CR_ADDRESS
     const arbitrableTokenList = eth
