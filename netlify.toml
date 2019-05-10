@@ -10,8 +10,9 @@
   YARN_FLAGS='--pure-lockfile'
   REACT_APP_PROD_ETHEREUM_PROVIDER="https://kovan.infura.io/v3/9c26dd38fd2e44e6bcff6a133eb67930"
   REACT_APP_PROD_IPFS_URL="https://ipfs.kleros.io"
-  REACT_APP_PROD_S3_URL="https://8aoprv935h.execute-api.us-east-2.amazonaws.com/staging/cfs"
   REACT_APP_PROD_T2CR_URL="https://tokens.kleros.io"
+  REACT_APP_KOVAN_T2CR_ADDRESS=0x25dd2659a1430cdbd678615c7409164ae486c146
+  REACT_APP_MAINNET_T2CR_ADDRESS=0xebcf3bca271b26ae4b162ba560e243055af0e679
 
 # Production context: All deploys to the main
 # repository branch will inherit these settings.
@@ -21,8 +22,9 @@
   YARN_FLAGS='--pure-lockfile'
   REACT_APP_PROD_ETHEREUM_PROVIDER="https://mainnet.infura.io/v3/9c26dd38fd2e44e6bcff6a133eb67930"
   REACT_APP_PROD_IPFS_URL="https://ipfs.kleros.io"
-  REACT_APP_PROD_S3_URL="https://8aoprv935h.execute-api.us-east-2.amazonaws.com/staging/cfs"
   REACT_APP_PROD_T2CR_URL="https://tokens.kleros.io"
+  REACT_APP_KOVAN_T2CR_ADDRESS=0x25dd2659a1430cdbd678615c7409164ae486c146
+  REACT_APP_MAINNET_T2CR_ADDRESS=0xebcf3bca271b26ae4b162ba560e243055af0e679
 
 [[redirects]]
   from = "/*"
@@ -30,11 +32,6 @@
   status = 200
 
 [[headers]]
-  for = "/t2cr"
-  [headers.values]
-    Access-Control-Allow-Origin = "*"
-
-[[headers]]
-  for = "/badge"
+  for = "/*"
   [headers.values]
     Access-Control-Allow-Origin = "*"
