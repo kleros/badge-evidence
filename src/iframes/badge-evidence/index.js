@@ -6,7 +6,8 @@ import {
   eth,
   T2CR_URL,
   web3,
-  T2CR_ADDRESS,
+  KOVAN_T2CR_ADDRESS,
+  MAINNET_T2CR_ADDRESS,
   IPFS_URL
 } from '../../bootstrap/dapp-api'
 import UnknownToken from '../../assets/unknown.svg'
@@ -58,9 +59,13 @@ class BadgeEvidence extends Component {
     ))[0]
 
     // Get token information, if ever submitted to the T2CR.
+    const KOVAN_ID = 42
+    const chainID = await web3.eth.getChainID()
+    const t2crAddress =
+      chainID === KOVAN_ID ? KOVAN_T2CR_ADDRESS : MAINNET_T2CR_ADDRESS
     const arbitrableTokenList = eth
       .contract(ArbitrableTokenList.abi)
-      .at(T2CR_ADDRESS)
+      .at(t2crAddress)
     const tokenSubmissions = await getTokenSubmissions({
       arbitrableTokenList,
       tokenAddress
